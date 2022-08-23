@@ -10,13 +10,26 @@
 		"inputs": [
 			{
 				"internalType": "address",
+				"name": "addAddress",
+				"type": "address"
+			}
+		],
+		"name": "manuallyAddAddressToWhitelist",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
 				"name": "removeAddress",
 				"type": "address"
 			}
 		],
 		"name": "removeAddressFromWhitelist",
 		"outputs": [],
-		"stateMutability": "nonpayable",
+		"stateMutability": "payable",
 		"type": "function"
 	},
 	{
@@ -29,19 +42,65 @@
 		],
 		"name": "setWhitelistMintStatus",
 		"outputs": [],
-		"stateMutability": "nonpayable",
+		"stateMutability": "payable",
 		"type": "function"
+	},
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"inputs": [],
+		"name": "Whitelist__AlreadyWhitelisted",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "Whitelist__NotWhitelisted",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "Whitelist__WhitelistClosed",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "Whitelist__WhitelistLimitReached",
+		"type": "error"
 	},
 	{
 		"inputs": [
 			{
-				"internalType": "uint8",
-				"name": "_maxWhitelistedAddresses",
-				"type": "uint8"
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
 			}
 		],
-		"stateMutability": "nonpayable",
-		"type": "constructor"
+		"name": "addressById",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "counter",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
 	},
 	{
 		"inputs": [],
@@ -93,9 +152,9 @@
 		"name": "maxWhitelistedAddresses",
 		"outputs": [
 			{
-				"internalType": "uint8",
+				"internalType": "uint256",
 				"name": "",
-				"type": "uint8"
+				"type": "uint256"
 			}
 		],
 		"stateMutability": "view",
@@ -109,6 +168,19 @@
 				"internalType": "uint8",
 				"name": "",
 				"type": "uint8"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "owner",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
 			}
 		],
 		"stateMutability": "view",
