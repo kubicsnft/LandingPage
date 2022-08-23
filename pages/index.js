@@ -22,8 +22,8 @@ export default function Home() {
                     {/* Switch to  change language */}
                     <ToggleSwitch />
                 </header>
-                <main className="flex flex-col items-center h-full pb-16">
-                    <div className="flex items-center justify-center h-full text-3xl ">
+                <main className="flex flex-col items-center h-full pb-16 text-center">
+                    <div className="flex items-center justify-center h-full mb-2 text-2xl md:text-3xl ">
                         <FormattedMessage
                             id="app.slogan"
                             defaultMessage="The world will never be round again"
@@ -63,7 +63,7 @@ export default function Home() {
                 <footer className="flex flex-col items-center justify-center">
 
                     {/* Newsletter */}
-                    <div className="flex w-4/12 mb-3 ">
+                    <div className="flex mb-3 lg:w-4/12 ">
                         <Newsletter />
                     </div>
                     <div className="flex flex-col items-center justify-center w-3/5 text-center ">

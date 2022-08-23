@@ -135,7 +135,7 @@ export default function Whitelist() {
   }
   // ========================================================
   return (
-    <div>
+    <div className="flex">
       {hasMetamask ? (
         isConnected ? ("") : (
           <div>
