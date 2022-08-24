@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import kubicsWhitelist from "../artifacts/kubicsWhitelist.json";
 import Swal from 'sweetalert2'
 import { MovingSquareLoader } from 'react-loaders-kit'
+import { FormattedMessage } from "react-intl"
 
 export default function Whitelist() {
 
@@ -122,12 +123,22 @@ export default function Whitelist() {
     else {
       return (
         <div className="flex flex-col items-center p-2 border shadow rounded-xl">
-          <div>Connected! Make sure you are on the ETH Chain</div>
+          <div>
+            <FormattedMessage
+              id='wl.connected'
+              defaultMessage='Connected! Make sure you are on the ETH Chain'
+            />
+          </div>
           <button className="mt-4 learn-more" onClick={() => addToWhitelist()}>
             <span className="circle" aria-hidden="true">
               <span className="icon arrow"></span>
             </span>
-            <span className="button-text" translate="no">JOIN OUR WHITELIST</span>
+            <span className="button-text" translate="no">
+              <FormattedMessage
+                id='wl.join'
+                defaultMessage='JOIN OUR WHITELIST'
+              />
+            </span>
           </button>
         </div>
       )
@@ -149,7 +160,10 @@ export default function Whitelist() {
                 height='30'
                 alt="metamask"
               />
-              Connect with Metamask to join our Whitelist!
+              <FormattedMessage
+                id='wl.metamask'
+                defaultMessage='Connect with Metamask to join our Whitelist!'
+              />
             </button>
           </div>
         )
@@ -160,7 +174,12 @@ export default function Whitelist() {
         {isConnected ? (
           isWhitelisted ? (
             <div>
-              <div className="p-2 text-green-400 border shadow rounded-xl">Already whitelisted! </div>
+              <div className="p-2 text-green-400 border shadow rounded-xl">
+                <FormattedMessage
+                  id='wl.already'
+                  defaultMessage='Already whitelisted!'
+                />
+              </div>
             </div>) : (
             buttonLoading()
           )

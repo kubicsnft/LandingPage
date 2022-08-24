@@ -4,6 +4,10 @@
     "app.text2":"More info coming soon",
     "app.text3":"SUBCRIBE TO OUR NEWSLETTERS",
     "app.input":"Your email address",
-    "app.button":"Subscribe"
+    "app.button":"Subscribe",
+    "wl.connected":"Connected! Make sure you are on the ETH Chain",
+    "wl.join":"JOIN OUR WHITELIST",
+    "wl.already":"Already whitelisted!",
+    "wl.metamask":"Connect with Metamask to join our Whitelist!"
     
 }
